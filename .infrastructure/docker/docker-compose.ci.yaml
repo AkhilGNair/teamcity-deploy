@@ -1,0 +1,6 @@
+version: "3.6"
+
+services:
+    logging-app:
+        image: gcr.io/revolut-ds/test/logging:${PROJECT_RELEASE_TAG}
+        container_name: test-logging-${PROJECT_RELEASE_TAG}
