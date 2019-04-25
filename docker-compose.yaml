@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+  logging-app:
+    build:
+      context: ${PWD}
+    image: gcr.io/revolut-ds/test/logging
+    networks:
+    - logging
+
+networks:
+  logging:

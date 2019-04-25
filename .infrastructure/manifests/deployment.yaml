@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: simple-logger
+  name: simple-logger
+  namespace: deletable
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: simple-logger
+  template:
+    metadata:
+      labels:
+        run: simple-logger
+    spec:
+      containers:
+      - name: simple-logger
+        image: gcr.io/revolut-ds/test/logging:latest
+        imagePullPolicy: Always
+      restartPolicy: Always
+
