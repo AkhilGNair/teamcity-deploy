@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: simple-logger
-        image: gcr.io/revolut-ds/test/logging:latest
+        image: gcr.io/revolut-ds/test/logging:{{ RELEASE_TAG }}
         imagePullPolicy: Always
       restartPolicy: Always
 
